@@ -1,30 +1,26 @@
-import { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
-import Hero from './components/Hero'
-import Projects from './components/Projects'
-import Contact from './components/Contact'
-import About from './components/About'
-import ProjectsPage from './components/ProjectsPage'
 import AnimatedBg from './components/AnimatedBg'
+import HomePage from './pages/HomePage'
+import ProjectsPage from './pages/ProjectsPage'
+import ContactPage from './pages/ContactPage'
+import ResumePage from './pages/ResumePage'
 
 export default function App(){
-  const [currentPage, setCurrentPage] = useState<'home' | 'projects' | 'about'>('home')
-
   return (
-    <div className="app-root">
-      <AnimatedBg />
-      <Header onNavigate={setCurrentPage} />
-      <main>
-        {currentPage === 'home' && (
-          <>
-            <Hero />
-            <Projects />
-            <Contact />
-          </>
-        )}
-        {currentPage === 'projects' && <ProjectsPage />}
-        {currentPage === 'about' && <About />}
-      </main>
-    </div>
+    <Router>
+      <div className="app-root">
+        <AnimatedBg />
+        <Header />
+        <main>
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="/projects" element={<ProjectsPage />} />
+            <Route path="/resume" element={<ResumePage />} />
+            <Route path="/contact" element={<ContactPage />} />
+          </Routes>
+        </main>
+      </div>
+    </Router>
   )
 }

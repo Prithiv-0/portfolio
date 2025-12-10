@@ -15,9 +15,6 @@ export default function Projects(){
       <div className="mt-6 projects-grid">
         {projects.map((p, i)=> (
           <motion.article key={i} className="card" whileHover={{y:-8, scale:1.02}} transition={{type:'spring', stiffness:260}}>
-            <div className="card-media">
-              <img src={`/assets/images/project-${i+1}.svg`} alt={p.title} />
-            </div>
             <div className="card-body">
               <h3 style={{margin:0,fontSize:18}}>{p.title}</h3>
               <p className="card-role">{p.role}</p>

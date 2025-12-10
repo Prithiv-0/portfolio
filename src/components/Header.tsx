@@ -1,18 +1,20 @@
 import React from 'react'
+import { Link, useLocation } from 'react-router-dom'
 
-interface HeaderProps {
-  onNavigate?: (page: 'home' | 'projects' | 'about') => void
-}
+export default function Header(){
+  const location = useLocation()
 
-export default function Header({ onNavigate }: HeaderProps){
+  const isActive = (path: string) => location.pathname === path
+
   return (
     <header className="site-header">
-      <div className="container header-inner" style={{display:'flex',alignItems:'center',justifyContent:'space-between'}}>
-        <a href="#hero" onClick={() => onNavigate?.('home')} style={{fontWeight:700,fontSize:18,cursor:'pointer',color:'white'}}>HOME</a>
+      <div className="container header-inner">
+        <Link to="/" className="logo">PA</Link>
         <nav className="site-nav">
-          <a className="nav-link" href="#about" onClick={(e) => { e.preventDefault(); onNavigate?.('about') }}>About</a>
-          <a className="nav-link" href="#projects" onClick={(e) => { e.preventDefault(); onNavigate?.('projects') }}>Projects</a>
-          <a className="nav-link" href="#contact" onClick={() => onNavigate?.('home')}>Contact</a>
+          <Link to="/" className={`nav-link ${isActive('/') ? 'active' : ''}`}>Home</Link>
+          <Link to="/projects" className={`nav-link ${isActive('/projects') ? 'active' : ''}`}>Projects</Link>
+          <Link to="/resume" className={`nav-link ${isActive('/resume') ? 'active' : ''}`}>Resume</Link>
+          <Link to="/contact" className={`nav-link ${isActive('/contact') ? 'active' : ''}`}>Contact</Link>
         </nav>
       </div>
     </header>
