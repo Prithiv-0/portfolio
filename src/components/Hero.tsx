@@ -14,7 +14,7 @@ export default function Hero(){
         </div>
 
         <div>
-          <div className="profile-card" border="true">
+          <div className="profile-card">
             <img className="profile-img" src="/assets/images/profile.png" alt="Prithiv" />
             <div style={{marginTop:12}}>
               <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',borderTop:'1px solid var(--muted)',paddingTop:8}}>
