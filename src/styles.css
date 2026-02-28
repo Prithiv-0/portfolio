@@ -83,8 +83,8 @@ body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,R
 .project-tech{display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1.5rem}
 .tech-badge{background:rgba(0,224,184,0.1);color:var(--accent);padding:0.35rem 0.75rem;border-radius:999px;font-size:0.85rem;border:1px solid rgba(0,224,184,0.2)}
 .project-summary{font-size:1.1rem;color:var(--text);line-height:1.6;margin-bottom:1.5rem}
-.project-image{margin:1.5rem 0;border-radius:12px;overflow:hidden}
-.project-image img{width:100%;height:auto;display:block}
+.project-link{display:inline-block;margin-bottom:1rem;color:var(--accent);text-decoration:none;font-weight:600}
+.project-link:hover{text-decoration:underline}
 .project-section{margin-bottom:1.5rem}
 .project-section h3{color:var(--accent);margin-bottom:0.75rem;font-size:1.2rem}
 .project-section p{color:var(--muted);line-height:1.7}

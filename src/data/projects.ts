@@ -3,12 +3,12 @@ export type Project = {
   title: string
   role: string
   duration: string
+  link?: string
   tech: string[]
   summary: string
   problem: string
   process: string[]
   learnings: string
-  image: string
 }
 
 export const projects: Project[] = [
@@ -30,13 +30,13 @@ export const projects: Project[] = [
     ],
     learnings:
       'Data quality is the most important factor in a successful ML project. Achieved 90% detection accuracy, demonstrating the value of careful dataset creation and systematic benchmarking.',
-    image: '/assets/images/project-1.svg',
   },
   {
     id: 2,
     title: 'Scholar Weave',
     role: 'Back-End & Full-Stack Developer',
     duration: '2025 – Present',
+    link: 'https://github.com/Prithiv-0/Scholarweave',
     tech: ['Go', 'React', 'Tailwind CSS', 'RDFLib', 'SPARQL', 'Cytoscape.js'],
     summary:
       'An ongoing project to build a web app for academic discovery, allowing users to visualize the connections between research papers, authors, and topics.',
@@ -50,7 +50,6 @@ export const projects: Project[] = [
     ],
     learnings:
       'Designed a clean, scalable back-end architecture in Go. Deep dive into concurrent programming, API design, and semantic web technologies.',
-    image: '/assets/images/project-2.svg',
   },
   {
     id: 3,
@@ -70,7 +69,6 @@ export const projects: Project[] = [
     ],
     learnings:
       'Deep knowledge of low-level systems programming in Rust, multi-threading with Rayon, and how to structure configurable command-line applications.',
-    image: '/assets/images/project-3.svg',
   },
 ]
 

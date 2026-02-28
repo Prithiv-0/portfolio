@@ -29,6 +29,16 @@ export default function ProjectsPage() {
                   <span className="role">{project.role}</span>
                   <span className="duration">{project.duration}</span>
                 </div>
+                {project.link ? (
+                  <a
+                    href={project.link}
+                    className="project-link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    View Repository →
+                  </a>
+                ) : null}
               </div>
 
               <div className="project-tech">
@@ -40,10 +50,6 @@ export default function ProjectsPage() {
               </div>
 
               <p className="project-summary">{project.summary}</p>
-
-              <div className="project-image">
-                <img src={project.image} alt={`${project.title} project visual`} />
-              </div>
 
               <div className="project-section">
                 <h3>The Problem & Goal</h3>
