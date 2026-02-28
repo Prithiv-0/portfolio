@@ -1,26 +1,27 @@
-import React from 'react'
 import { motion } from 'framer-motion'
+import { profile } from '../data/profile'
 
-export default function Hero(){
+export default function Hero() {
   return (
     <section id="hero" className="hero">
       <div className="container hero-grid">
         <div>
-          <motion.h1 className="hero-title" initial={{opacity:0,y:8}} animate={{opacity:1,y:0}} transition={{duration:0.6}}>Prithiv Alagirisamy</motion.h1>
-          <motion.p className="hero-sub" initial={{opacity:0,y:8}} animate={{opacity:1,y:0}} transition={{delay:0.08}}>
+          <motion.h1 className="hero-title" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>
+            {profile.name}
+          </motion.h1>
+          <motion.p className="hero-sub" initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.08 }}>
             Bachelor of Technology in Computer Science & Engineering with a passion for machine learning, systems programming, and full-stack development. I build high-performance systems, research-grade ML models, and craft delightful user experiences.
           </motion.p>
-
         </div>
 
         <div>
           <div className="profile-card">
-            <img className="profile-img" src="/assets/images/profile.png" alt="Prithiv" />
-            <div style={{marginTop:12}}>
-              <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',borderTop:'1px solid var(--muted)',paddingTop:8}}>
+            <img className="profile-img" src="/assets/images/profile.png" alt="Portrait of Prithiv Alagirisamy" />
+            <div className="profile-details">
+              <div className="profile-meta">
                 <div>
-                  <div style={{fontWeight:700}}>Prithiv Alagirisamy</div>
-                  <div className="muted" style={{fontSize:12}}>B.Tech — Amrita Vishwa Vidyapeetham</div>
+                  <div className="profile-name">{profile.name}</div>
+                  <div className="muted profile-school">B.Tech — {profile.institution}</div>
                 </div>
               </div>
             </div>
