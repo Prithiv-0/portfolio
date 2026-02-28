@@ -29,7 +29,7 @@ export const technicalSkills = [
 
 export const education = {
   school: 'Amrita Vishwa Vidyapeetham, Coimbatore',
-  duration: '2022 – Present',
+  duration: '2023 – Present',
   degree: 'Bachelor of Technology in Computer Science and Engineering',
   coursework:
     'Data Structures and Algorithms, Machine Learning, Object Oriented Programming, Operating Systems, Computer Networks, Database Management Systems, UI/UX Design',
